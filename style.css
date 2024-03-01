@@ -98,6 +98,18 @@ header h2 {
     padding: 5px 0;
 }
 
+h3{
+
+    text-align: center; /* no me cambien esto ya que lo uso para nuestra presentación */
+
+}
+
+p{
+    text-align: justify;
+}
+
+
+
 .content_person {
     display: flex;
     width: 170px;
