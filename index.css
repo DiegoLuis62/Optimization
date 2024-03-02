@@ -12,16 +12,15 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    height: 9vh;
-    box-shadow: 0px 0.5px 4px #c6c5c5;
-    /* border-bottom: 1px #c6c5c5 solid; */
+    height: 12vh;
+    box-shadow: 3px 0.5px 4px #c6c5c5;
     align-items: center;
 }
 
 header h2 {
     margin: 0;
     padding-left: 30px;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .div_menu {
@@ -37,10 +36,15 @@ header h2 {
 
 .logo {
     display: flex;
-    height: 9vh;
+    height: 12vh;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.logo img {
+    height: 2.2em;
 }
 
 .op_menu {
@@ -63,7 +67,6 @@ header h2 {
 }
 
 .op_menu img {
-    object-fit: fill;
     width: 1em;
     margin-right: 5px;
     margin: 18px;
