@@ -149,10 +149,11 @@ p{
 }
 
 .square {
+    font-size: large;
     display: block;
     width: 100%;
-    background-color: blue;
-    height: 150px;
+    background-color: rgb(7, 7, 51);
+    height: auto;
     border-radius: 15px;
     margin: 20px 0;
 }
@@ -184,4 +185,12 @@ p{
 .content_graph img {
     width: 100%;
     height: auto;
+}
+
+
+.section{
+
+color: #e4e4e4;
+padding: 1em;
+
 }
