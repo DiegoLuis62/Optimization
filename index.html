@@ -21,7 +21,7 @@
         </div>
         <ul>
             <li>
-                <a href="" class="op_menu op_menu_slc" onmouseover="showSelect(1)" onmouseout="noShowSelect(1)">
+                <a href="" class="op_menu" onmouseover="showSelect(1)" onmouseout="noShowSelect(1)">
                     <span id="span_op1"></span>
                     <img src="Icon/team_icon.png">Team
                 </a>
@@ -90,19 +90,9 @@
             </section>
 
             <section class="square">
-                <!-- Aquí puedes colocar tu hipótesis en un párrafo o cualquier otro elemento adecuado -->
                 <div class="section">
                     <h3>Dataset Selection</h3>
                     <p>
-                        Our hypothesis is that various property features, such as location, size, and amenities, are
-                        correlated with their prices.
-                        We aim to train a machine learning model on the "Colombia Housing Properties Price" dataset to
-                        explore these correlations
-                        and develop a predictive model capable of estimating property prices accurately.
-                        This will enhance our understanding of the factors influencing property prices in Colombia.
-                    </p>
-                    <p>
-                        English:
                         We chose the "Colombia Housing Properties Price" dataset for its relevance and extensive data,
                         featuring over 1,000,000 property listings. With varied features such as price, location, and
                         property size, it offers a comprehensive view of Colombia's real estate market. This dataset
@@ -115,13 +105,56 @@
             </section>
 
             <section class="content_statistics">
+                <h3>Correlation Matrix</h3>
                 <div class="content_graph content_graph_left">
-                    <h3>Quick Transfer</h3>
-                    <img src="Images/Grafica.png">
+                    <div class="graph">
+                        <img src="Images/Grafica1.jpeg">
+                    </div>
+                    <div class="graph_text">
+                        <p>
+                            In this correlation matrix, the linear relationships between the variables in the dataset 
+                            are revealed. A strong correlation is observed between "rooms", "bedrooms" and "bathrooms",
+                            which is expected given their relationship with the number of rooms and bathrooms in a
+                            property. The significant correlation of "bathrooms" with the price stands out, suggesting
+                            that the number of bathrooms may be an influential factor in the value of the property.
+                            The location variables, “lat” and “lon,” exhibit moderate correlations with other variables,
+                            indicating a potential relationship between geographic location and property characteristics.
+                            Furthermore, a moderate correlation is identified between "surface_total" and price, suggesting 
+                            that the total size of the property can affect the value, although to a lesser extent than other
+                            characteristics such as the number of bedrooms or bathrooms. This information provides valuable
+                            insights to understand which aspects can most significantly influence the price of a property.
+                        </p>
+                    </div>
                 </div>
+
+                <h3>Distribution of Numerical Variables</h3>
                 <div class="content_graph content_graph_right">
-                    <h3>Quick Transfer</h3>
-                    <img src="Images/Grafica.png">
+                    <div class="graph_text">
+                        <p>
+                            Additionally, we graphically obtained the numerical distributions of the variables that have
+                            a strong relationship with the price of housing. Here you can notice that they maintain a bias
+                            to the right, this is due to the variety of atypical values that we can find in the dataset.
+                            Additionally, from here we can get several ideas about our data, for example:
+                        </p>
+                        <ul>
+                            <li>
+                                For the bedrooms, the distribution reaches its maximum point between 3 and 5,
+                                which tells us that these are going to be typical numbers in residences, but
+                                at the same time there are atypical data such as 30 or 60 rooms.
+                            </li>
+                            <li>
+                                For bathrooms, it is also observed that the usual values range between 2 and 3
+                                bathrooms per residence.
+                            </li>
+                            <li>
+                                Regarding the surfaces, it can be seen that we have mostly residences with
+                                surfaces less than 10,000m^2
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="graph">
+                        <img src="Images/Grafica2.jpeg">
+                    </div>
                 </div>
             </section>
 

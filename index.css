@@ -2,6 +2,10 @@
     font-family: Ubuntu, Arial;
 }
 
+p {
+    margin: 0;
+}
+
 ul {
     padding: 0;
     margin: 0;
@@ -154,32 +158,73 @@ header h2 {
 }
 
 .content_statistics {
-    display: flex;
+    font-size: large;
+    display: block;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0.3px 0.3px 1.5px gray;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.content_statistics h3 {
+    display: block;
+    margin: 0;
+    font-size: 1.1em;
+    padding: 20px;
+    text-align: center;
 }
 
 .content_graph {
-    width: 45%;
+    display: flex;
+    padding: 10px;
 }
 
-.content_graph_left {
+.content_graph .graph {
+    display: inline-flex;
+    width: 45%;
+    height: auto;
+    flex-direction: column;
+}
+
+.content_graph .graph_text {
+    display: flex;
+    margin: 0;
+    width: 45%;
+    height: 100%;
+    font-size: 0.8em;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content_graph_left .graph {
     margin-left: 0;
     margin-right: auto;
 }
 
-.content_graph_right {
-    margin-right: 0;
+.content_graph_left .graph_text {
     margin-left: auto;
+    margin-right: 20px;
+    text-align: right;
 }
 
-.content_graph h3 {
-    margin: 0;
-    font-size: 0.9em;
-    padding: 10px 30px;
+.content_graph_right .graph {
+    margin-left: auto;
+    margin-right: 0;
 }
 
-.content_graph img {
-    width: 100%;
-    height: auto;
+.content_graph_right .graph_text {
+    margin-left: 20px;
+    margin-right: auto;
+    text-align: left;
+}
+
+.content_graph_right .graph_text ul {
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .section{
