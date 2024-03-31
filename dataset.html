@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/web.css">
+    <link rel="stylesheet" href="css/dataset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>HPP</title>
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="Images/HPP_logo.png"><span>HPP</span>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html" class="op_menu" onmouseover="showSelect(1)" onmouseout="noShowSelect(1)">
+                    <span id="span_op1"></span>
+                    <img src="Icon/team_icon.png">Team
+                </a>
+            </li>
+            <li>
+                <a href="dataset.html" class="op_menu op_menu-active" onmouseover="showSelect(2)" onmouseout="noShowSelect(2)">
+                    <span id="span_op2"></span>
+                    <img src="Icon/dataset_icon.png">Dataset
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DiegoLuis62/Optimization" target="_blank" class="op_menu" onmouseover="showSelect(3)" onmouseout="noShowSelect(3)">
+                    <span id="span_op3"></span>
+                    <img src="Icon/github_icon.png">Github
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section class="div_menu">
+        <header>
+            <h2>House Price Predictor</h2>
+        </header>
+        <div class="content">
+            <section class="square_black">
+                <div class="section">
+                    <h3>Objectives</h3>
+                    <p>
+                        The objective is to develop a regression model capable of predicting the
+                        price of real estate properties in Colombia, based on various characteristics.
+                        We will use a data set that contains information about geographic location
+                        (latitude and longitude), as well as physical attributes of the properties such
+                        as the number of rooms, bedrooms, bathrooms and the total area of ​​the property.
+                        Our goal is to train a machine learning model that, given a set of input features,
+                        can accurately estimate the price of a real estate property based on these
+                        characteristics. This model will have practical applications in the real estate market,
+                        providing buyers and sellers with a useful tool to evaluate the value of properties.
+                    </p>
+
+                </div>
+            </section>
+            <section class="square_white">
+                <div class="section">
+                    <h3>Details</h3>
+                    <p>
+                        After carrying out different tests and comparisons, it was decided to use
+                        a Random Forest regression model, this is a supervised learning algorithm
+                        used for both regression and classification tasks. 
+                        It is an ensemble technique that combines multiple decision trees during
+                        training and produces a more robust and generalizable model. In this model,
+                        the variables are used as input: 'lat', 'lon', 'rooms', 'bedrooms',
+                        'bathrooms', 'surface_total' with the objective of estimating the variable
+                        'price' that indicates the price of the property.<br>
+                        <br>
+                        After separating the data into training and testing, the RandomForest
+                        implementation looks like this:
+                    </p>
+                    <img src="Images/Model Implementation.jpeg">
+                    <p>
+                        where:
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                Number of Estimators (n_estimators): Specifies the number of
+                                decision trees to be built in the forest. In this case, it was set
+                                to 200 (which gave us a higher score), meaning that a total of 200
+                                decision trees were built.
+                            </li>
+                            <li>
+                                Random State (random_state): This parameter is used to initialize
+                                the internal random number generator, ensuring that the results are
+                                reproducible.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        Which generated a score of:
+                    </p>
+                    <img src="Images/Model Score.jpeg">
+                    <p>
+                        suggesting that the model works quite well in this context
+                    </p>
+                </div>
+            </section>
+            <section class="square_black">
+                <div class="section">
+                    <h3>Validation methods and the Metrics employed</h3>
+                    <p>
+                        The Random Forest Regression model of the sckit-learn library has been
+                        used to predict the variable 'Price'. The method used to validate the
+                        model is the score() method which calculates the coefficient of
+                        determination (R^2) as a measure of model performance. Internally, when
+                        the score() method is called on a Random Forest regression model,
+                        scikit-learn uses the model predictions to calculate the coefficient of
+                        determination. This coefficient measures the proportion of the variance
+                        of the target variable that is explained by the model. In other words,
+                        it indicates how well the model predictions fit the actual data.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="js/web.js"></script>
+</body>
+</html>
