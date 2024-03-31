@@ -1,0 +1,41 @@
+.square_black {
+    font-size: large;
+    display: block;
+    width: 100%;
+    background-color: rgb(7, 7, 51);
+    color: #e4e4e4;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.square_white {
+    font-size: large;
+    display: block;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    box-shadow: 0.3px 0.3px 1.5px gray;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.section{
+    padding: 1em;
+}
+
+.section h3 {
+    font-size: 1.1em;
+}
+
+.section p {
+    text-align: justify;
+    font-size: 0.8em;
+    margin: 10px 0;
+}
+
+.section li {
+    text-align: justify;
+    font-size: 0.8em;
+}
