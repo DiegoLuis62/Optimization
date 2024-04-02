@@ -1,3 +1,7 @@
+a:visited {
+    color: #e4e4e4;
+}
+
 .square_black {
     font-size: large;
     display: block;
