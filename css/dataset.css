@@ -1,7 +1,3 @@
-a:visited {
-    color: #e4e4e4;
-}
-
 .square_black {
     font-size: large;
     display: block;
@@ -11,6 +7,10 @@ a:visited {
     height: auto;
     border-radius: 15px;
     margin: 20px 0;
+}
+
+.square_black a:visited {
+    color: #e4e4e4;
 }
 
 .square_white {
