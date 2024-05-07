@@ -1,3 +1,62 @@
+.content {
+    position: relative;
+    padding: 0 30px;
+    background-color: #effeff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    box-shadow: 0.3px 0.3px 1.5px gray;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+
+    h3 {
+        margin: 10px;
+        font-size: 1.1em;
+    }
+}
+
+.btn.select {
+    background-color: rgb(7, 7, 51);
+    color: #e4e4e4;
+}
+
+.models {
+    position: relative;
+}
+
+.model {
+    position: absolute;
+    top: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.model.select {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .square_black {
     font-size: large;
     display: block;

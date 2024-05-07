@@ -20,21 +20,18 @@
         </div>
         <ul>
             <li>
-                <a href="index.html" class="op_menu" onmouseover="showSelect(1)" onmouseout="noShowSelect(1)">
-                    <span id="span_op1"></span>
-                    <img src="Icon/team_icon.png">Team
+                <a href="index.html" class="op_menu">
+                    <span><img src="Icon/team_icon.png">Team</span>
                 </a>
             </li>
             <li>
-                <a href="dataset.html" class="op_menu op_menu-active" onmouseover="showSelect(2)" onmouseout="noShowSelect(2)">
-                    <span id="span_op2"></span>
-                    <img src="Icon/dataset_icon.png">Dataset
+                <a href="dataset.html" class="op_menu op_menu-active">
+                    <span><img src="Icon/dataset_icon.png">Models</span>
                 </a>
             </li>
             <li>
-                <a href="https://github.com/DiegoLuis62/Optimization" target="_blank" class="op_menu" onmouseover="showSelect(3)" onmouseout="noShowSelect(3)">
-                    <span id="span_op3"></span>
-                    <img src="Icon/github_icon.png">Github
+                <a href="https://github.com/DiegoLuis62/Optimization" target="_blank" class="op_menu">
+                    <span><img src="Icon/github_icon.png">Github</span>
                 </a>
             </li>
         </ul>
@@ -60,112 +57,241 @@
                         characteristics. This model will have practical applications in the real estate market,
                         providing buyers and sellers with a useful tool to evaluate the value of properties.
                     </p>
-
                 </div>
             </section>
-            <section class="square_white">
-                <div class="section">
-                    <h3>Model and Details</h3>
-                    <p>
-                        After carrying out different tests and comparisons, it was decided to use
-                        a Random Forest regression model, this is a supervised learning algorithm
-                        used for both regression and classification tasks. 
-                        It is an ensemble technique that combines multiple decision trees during
-                        training and produces a more robust and generalizable model. In this model,
-                        the variables are used as input: 'lat', 'lon', 'rooms', 'bedrooms',
-                        'bathrooms', 'surface_total' with the objective of estimating the variable
-                        'price' that indicates the price of the property.<br>
-                        <br>
-                        After separating the data into training and testing, the RandomForest
-                        implementation looks like this:
-                    </p>
-                    <img src="Images/Model Implementation.jpeg">
-                    <p>
-                        where:
-                        <ul style="padding-left: 30px;">
-                            <li>
-                                Number of Estimators (n_estimators): Specifies the number of
-                                decision trees to be built in the forest. In this case, it was set
-                                to 200 (which gave us a higher score), meaning that a total of 200
-                                decision trees were built.
-                            </li>
-                            <li>
-                                Random State (random_state): This parameter is used to initialize
-                                the internal random number generator, ensuring that the results are
-                                reproducible.
-                            </li>
-                        </ul>
-                    </p>
-                    <p>
-                        Which generated a score of:
-                    </p>
-                    <img src="Images/Model Score.jpeg">
-                    <p>
-                        suggesting that the model works quite well in this context
-                    </p>
+            <section class="buttons">
+                <div id="btn_model1" class="btn select" onclick="setSelect('0')">
+                    <h3>Model 1</h3>
+                    <p>Lineal Regression</p>
+                </div>
+                <div id="btn_model2" class="btn" onclick="setSelect('1')">
+                    <h3>Model 2</h3>
+                    <p>Nuronal Network</p>
+                </div>
+                <div id="btn_comparation" class="btn" onclick="setSelect('2')">
+                    <h3>Comparation</h3>
+                    <p>...</p>
                 </div>
             </section>
-            <section class="square_black">
-                <div class="section">
-                    <h3>Validation methods and the Metrics employed</h3>
-                    <p>
-                        The Random Forest Regression model of the sckit-learn library has been
-                        used to predict the variable 'Price'. The method used to validate the
-                        model is the score() method which calculates the coefficient of
-                        determination (R^2) as a measure of model performance. Internally, when
-                        the score() method is called on a Random Forest regression model,
-                        scikit-learn uses the model predictions to calculate the coefficient of
-                        determination. This coefficient measures the proportion of the variance
-                        of the target variable that is explained by the model. In other words,
-                        it indicates how well the model predictions fit the actual data.
-                    </p>
+            <section class="models">
+                <div id="containerModel1" class="model select">
+                    <section class="square_white">
+                        <div class="section">
+                            <h3>Model and Details</h3>
+                            <p>
+                                After carrying out different tests and comparisons, it was decided to use
+                                a Random Forest regression model, this is a supervised learning algorithm
+                                used for both regression and classification tasks. 
+                                It is an ensemble technique that combines multiple decision trees during
+                                training and produces a more robust and generalizable model. In this model,
+                                the variables are used as input: 'lat', 'lon', 'rooms', 'bedrooms',
+                                'bathrooms', 'surface_total' with the objective of estimating the variable
+                                'price' that indicates the price of the property.<br>
+                                <br>
+                                After separating the data into training and testing, the RandomForest
+                                implementation looks like this:
+                            </p>
+                            <img src="Images/Model Implementation.jpeg">
+                            <p>
+                                where:
+                                <ul style="padding-left: 30px;">
+                                    <li>
+                                        Number of Estimators (n_estimators): Specifies the number of
+                                        decision trees to be built in the forest. In this case, it was set
+                                        to 200 (which gave us a higher score), meaning that a total of 200
+                                        decision trees were built.
+                                    </li>
+                                    <li>
+                                        Random State (random_state): This parameter is used to initialize
+                                        the internal random number generator, ensuring that the results are
+                                        reproducible.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Which generated a score of:
+                            </p>
+                            <img src="Images/Model Score.jpeg">
+                            <p>
+                                suggesting that the model works quite well in this context
+                            </p>
+                        </div>
+                    </section>
+                    <section class="square_black">
+                        <div class="section">
+                            <h3>Validation methods and the Metrics employed</h3>
+                            <p>
+                                The Random Forest Regression model of the sckit-learn library has been
+                                used to predict the variable 'Price'. The method used to validate the
+                                model is the score() method which calculates the coefficient of
+                                determination (R^2) as a measure of model performance. Internally, when
+                                the score() method is called on a Random Forest regression model,
+                                scikit-learn uses the model predictions to calculate the coefficient of
+                                determination. This coefficient measures the proportion of the variance
+                                of the target variable that is explained by the model. In other words,
+                                it indicates how well the model predictions fit the actual data.
+                            </p>
+                        </div>
+                    </section>
+        
+                    <section class="square_white">
+                        <div class="section">
+                            <h3>Preliminary Conclusions</h3>
+                            <p>
+                                It is crucial to highlight that the selection of a model is only the
+                                first step in a continuous process of refinement and improvement.
+                                Improving model accuracy not only depends on the selection of the
+                                appropriate algorithm but also on the quality and quantity of available
+                                data, as well as feature engineering. Additionally, deep understanding of
+                                the problem domain and constant iteration are critical to developing a
+                                robust and reliable predictive model. In future research, it would be
+                                valuable to explore feature selection, hyperparameter tuning, and model
+                                ensemble techniques to further boost the predictive performance of the
+                                Random Forest and ultimately provide more accurate and useful home price
+                                estimates for stakeholders in the real estate sector in Colombia.<br>
+                                <br>
+                                After evaluating three different regression models to predict housing
+                                prices in Colombia, we have determined that the Random Forest model has
+                                proven to be the most promising according to our evaluation metric. The
+                                selection of this model is based on its superior performance, with a score
+                                of 0.7996, compared to the other models tested, namely Linear Regression and
+                                Gradient Boosting Regressor, which scored 0.3752 and 0.7767 respectively.<br>
+                                <br>
+                                By looking at the spread of predicted data versus actual data, several
+                                important patterns were identified. First, we note that the dispersion of the
+                                data increases as prices increase, indicating that the model fails to accurately
+                                predict higher-priced houses or apartments. However, most of the predicted data
+                                points are close to the regression line, representing a perfect prediction where
+                                the actual values are equal to the predicted values. In addition, there are points
+                                that show significant imprecision and deviate substantially from the regression
+                                line.<br>
+                                <br>
+                                Based on these observations, we conclude that although the Random Forest model
+                                demonstrates strong performance, there are still areas to improve its accuracy.
+                                These improvements can be achieved by acquiring more data available in our dataset
+                                or by optimizing model attributes. Therefore, we have chosen the Random Forest model
+                                as our initial model for this housing price prediction project in Colombia.<br>
+                                <br>
+                            </p>
+                        </div>
+                    </section>
                 </div>
-            </section>
-
-            <section class="square_white">
-                <div class="section">
-                    <h3>Preliminary Conclusions</h3>
-                    <p>
-                        It is crucial to highlight that the selection of a model is only the
-                        first step in a continuous process of refinement and improvement.
-                        Improving model accuracy not only depends on the selection of the
-                        appropriate algorithm but also on the quality and quantity of available
-                        data, as well as feature engineering. Additionally, deep understanding of
-                        the problem domain and constant iteration are critical to developing a
-                        robust and reliable predictive model. In future research, it would be
-                        valuable to explore feature selection, hyperparameter tuning, and model
-                        ensemble techniques to further boost the predictive performance of the
-                        Random Forest and ultimately provide more accurate and useful home price
-                        estimates for stakeholders in the real estate sector in Colombia.<br>
-                        <br>
-                        After evaluating three different regression models to predict housing
-                        prices in Colombia, we have determined that the Random Forest model has
-                        proven to be the most promising according to our evaluation metric. The
-                        selection of this model is based on its superior performance, with a score
-                        of 0.7996, compared to the other models tested, namely Linear Regression and
-                        Gradient Boosting Regressor, which scored 0.3752 and 0.7767 respectively.<br>
-                        <br>
-                        By looking at the spread of predicted data versus actual data, several
-                        important patterns were identified. First, we note that the dispersion of the
-                        data increases as prices increase, indicating that the model fails to accurately
-                        predict higher-priced houses or apartments. However, most of the predicted data
-                        points are close to the regression line, representing a perfect prediction where
-                        the actual values are equal to the predicted values. In addition, there are points
-                        that show significant imprecision and deviate substantially from the regression
-                        line.<br>
-                        <br>
-                        Based on these observations, we conclude that although the Random Forest model
-                        demonstrates strong performance, there are still areas to improve its accuracy.
-                        These improvements can be achieved by acquiring more data available in our dataset
-                        or by optimizing model attributes. Therefore, we have chosen the Random Forest model
-                        as our initial model for this housing price prediction project in Colombia.<br>
-                        <br>
-                    </p>
+                <div id="containerModel2" class="model">
+                    <section class="square_white">
+                        <div class="section">
+                            <h3>Model and Details</h3>
+                            <p>
+                                In this model we choose a regression neural network employed to predict house
+                                prices based on various features. The choice of this approach lies in the
+                                inherent ability of neural networks to learn complex relationships between input
+                                features and the target variable, in this case, house price.
+                            </p>
+                            <p>
+                                Details of the Neural Network Model:
+                                <ul style="padding-left: 30px;">
+                                    <li>
+                                        Hidden Layers: The neural network consists of six hidden layers, each
+                                        with 21 neurons. This deep structure effectively captures hierarchical and
+                                        complex relationships among house features, which can be crucial for accurate
+                                        price prediction.
+                                    </li>
+                                    <li>
+                                        Activation Function: The hyperbolic tangent activation function (tanh) is used.
+                                        This non-linear function introduces the ability to capture and model non-linear
+                                        relationships between input features and the target variable, thereby enhancing
+                                        the model's ability to adapt to the complexity of the data.
+                                    </li>
+                                    <li>
+                                        Regularization: To prevent overfitting, regularization is applied. In this case,
+                                        L2 regularization is used, which penalizes large weights in the network. This
+                                        helps control the model's complexity and improve its ability to generalize to
+                                        unseen data during training.
+                                    </li>
+                                    <li>
+                                        Training: The model is trained using the backpropagation algorithm, which adjusts
+                                        the network weights to minimize the loss function. During training, weights are
+                                        iteratively updated using gradient descent, allowing the model to gradually learn
+                                        to make more accurate predictions about house prices.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Model Performance: <br>
+                                The model's performance is evaluated using the coefficient of determination (R^2). An
+                                R^2 mean value of 0.7238940 after 100 iterations indicates that the model is able to
+                                explain approximately 72.39% of the variability in house prices in the test dataset.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="square_black">
+                        <div class="section">
+                            <h3>Validation methods and the Metrics employed</h3>
+                            <p>
+                                The Random Forest Regression model of the sckit-learn library has been
+                                used to predict the variable 'Price'. The method used to validate the
+                                model is the score() method which calculates the coefficient of
+                                determination (R^2) as a measure of model performance. Internally, when
+                                the score() method is called on a Random Forest regression model,
+                                scikit-learn uses the model predictions to calculate the coefficient of
+                                determination. This coefficient measures the proportion of the variance
+                                of the target variable that is explained by the model. In other words,
+                                it indicates how well the model predictions fit the actual data.
+                            </p>
+                        </div>
+                    </section>
+        
+                    <section class="square_white">
+                        <div class="section">
+                            <h3>Preliminary Conclusions</h3>
+                            <p>
+                                Comparing the new machine learning model with the previous analysis
+                                conducted on the "Colombia Housing Properties Price" dataset, several
+                                preliminary conclusions can be drawn. The new model, based on a Multi-Layer
+                                Perceptron Regressor (MLPRegressor), exhibits a moderate level of performance,
+                                with an average R-squared score of approximately 0.726 across multiple iterations.
+                                This indicates that the model can explain around 72.6% of the variance in
+                                the housing prices, slightly higher than the performance observed in the
+                                previous analysis. The features used in the new model, such as 'lat', 'lon',
+                                'rooms', 'bedrooms', 'bathrooms', 'Casa', 'Apartamento', and 'surface_total',
+                                align with the variables identified in the previous analysis as significantly
+                                correlated with property prices. This consistency suggests that these features
+                                indeed play crucial roles in determining housing prices in Colombia. The new model
+                                introduces greater complexity through the use of multiple hidden layers and neurons,
+                                potentially enabling it to capture nonlinear relationships within the dataset. While
+                                the new model demonstrates promising performance, there are opportunities for further
+                                enhancement through hyperparameter tuning and the exploration of alternative machine
+                                learning algorithms to deepen insights into the determinants of housing prices in
+                                Colombia. In summary, the preliminary analysis of the new model suggests that it
+                                offers a valuable framework for predicting housing prices based on property features,
+                                enhancing understanding of the factors influencing Colombia's real estate market.
+                                Further refinement and validation of the model will be essential for achieving robust
+                                and reliable predictions.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div id="containerComparation" class="model">
+                    <section class="square_white">
+                        <div class="section">
+                            <h3>Validation methods and the Metrics employed</h3>
+                            <p>
+                                The Random Forest Regression model of the sckit-learn library has been
+                                used to predict the variable 'Price'. The method used to validate the
+                                model is the score() method which calculates the coefficient of
+                                determination (R^2) as a measure of model performance. Internally, when
+                                the score() method is called on a Random Forest regression model,
+                                scikit-learn uses the model predictions to calculate the coefficient of
+                                determination. This coefficient measures the proportion of the variance
+                                of the target variable that is explained by the model. In other words,
+                                it indicates how well the model predictions fit the actual data.
+                            </p>
+                        </div>
+                    </section>
                 </div>
             </section>
         </div>
     </section>
 
-    <script src="js/web.js"></script>
+    <script src="js/dataset.js"></script>
 </body>
 </html>

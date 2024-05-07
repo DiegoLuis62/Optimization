@@ -1,3 +1,10 @@
+.content {
+    padding: 0 30px;
+    background-color: #effeff;
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
     font-size: 1em;
     padding-top: 30px;

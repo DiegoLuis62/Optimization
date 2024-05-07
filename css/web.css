@@ -16,6 +16,7 @@ header {
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 2;
     height: 12vh;
     box-shadow: 3px 0.5px 4px #c6c5c5;
     align-items: center;
@@ -28,11 +29,13 @@ header h2 {
 }
 
 .div_menu {
+    position: relative;
     padding-left: 190px;
 }
 
 .menu {
     position: fixed;
+    z-index: 1;
     width: 190px;
     height: 100vh;
     box-shadow: 0.5px 0px 4px #c6c5c5;
@@ -56,40 +59,33 @@ header h2 {
     background-color: #ffffff;
     color: #696969;
     height: 5vh;
-    padding: 10px 0;
+    padding: 10px 20px;
     align-items: center;
     text-decoration: none;
+    transition: background 0.2s;
+
+    span {
+        transition: transform 0.2s;
+    }
 }
 
 .op_menu-active {
     color: #0a0a0a;
 }
 
-.op_menu span {
-    display: none;
-    width: 8px;
-    height: 100%;
-    background-color: blue;
-    border-radius: 0 40% 40% 0;
-    transform: translate(-50%, 0);
-}
-
 .op_menu img {
     width: 1em;
-    margin-right: 5px;
-    margin: 18px;
+    margin-right: 10px;
 }
 
 .op_menu:hover {
     background-color: #e4e4e4;
-}
 
-.op_menu_slc {
-    color: blue;
+    span {
+        transform: translateX(8px);
+    }
 }
 
 .content {
-    background-color: #effeff;
     min-height: 91vh;
-    padding: 0 30px;
 }
