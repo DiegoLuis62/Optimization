@@ -102,3 +102,13 @@
     text-align: justify;
     font-size: 0.8em;
 }
+
+.graph-distribution {
+    text-align: center;
+    img {
+        width: 400px;
+    }
+    span {
+        display: block;
+    }
+}

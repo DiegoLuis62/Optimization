@@ -66,10 +66,10 @@
                 </div>
                 <div id="btn_model2" class="btn" onclick="setSelect('1')">
                     <h3>Model 2</h3>
-                    <p>Nuronal Network</p>
+                    <p>Neural Network</p>
                 </div>
-                <div id="btn_comparation" class="btn" onclick="setSelect('2')">
-                    <h3>Comparation</h3>
+                <div id="btn_comparison" class="btn" onclick="setSelect('2')">
+                    <h3>Comparison</h3>
                     <p>...</p>
                 </div>
             </section>
@@ -227,16 +227,17 @@
                         <div class="section">
                             <h3>Validation methods and the Metrics employed</h3>
                             <p>
-                                The Random Forest Regression model of the sckit-learn library has been
-                                used to predict the variable 'Price'. The method used to validate the
-                                model is the score() method which calculates the coefficient of
-                                determination (R^2) as a measure of model performance. Internally, when
-                                the score() method is called on a Random Forest regression model,
-                                scikit-learn uses the model predictions to calculate the coefficient of
-                                determination. This coefficient measures the proportion of the variance
-                                of the target variable that is explained by the model. In other words,
-                                it indicates how well the model predictions fit the actual data.
+                                For this second model, the score metric (coefficient of determination ( R^2 )) is
+                                used, which is used to evaluate the performance of the MLPRegressor model on the
+                                training data. This coefficient reflects how accurately the model fits the data
+                                during the training process. After carrying out 100 iterations with the model, it is
+                                observed that the score oscillates in a range between 0.71 and 0.76, with multiple
+                                values obtained throughout the iterations.<br>
                             </p>
+                            <div class="graph-distribution">
+                                <img src="Images/Distribution of the score.jpeg">
+                                <span>Distribution of the score in 100 iterations</span>
+                            </div>
                         </div>
                     </section>
         
@@ -270,20 +271,33 @@
                         </div>
                     </section>
                 </div>
-                <div id="containerComparation" class="model">
+                <div id="containerComparison" class="model">
                     <section class="square_white">
                         <div class="section">
-                            <h3>Validation methods and the Metrics employed</h3>
+                            <h3>Comparison in terms of metrics Linear Regression vs Neural Network</h3>
                             <p>
-                                The Random Forest Regression model of the sckit-learn library has been
-                                used to predict the variable 'Price'. The method used to validate the
-                                model is the score() method which calculates the coefficient of
-                                determination (R^2) as a measure of model performance. Internally, when
-                                the score() method is called on a Random Forest regression model,
-                                scikit-learn uses the model predictions to calculate the coefficient of
-                                determination. This coefficient measures the proportion of the variance
-                                of the target variable that is explained by the model. In other words,
-                                it indicates how well the model predictions fit the actual data.
+                                When comparing the different models applied to the data set after a cleaning and
+                                analysis process, evaluating them using the coefficient of determination (R-squared)
+                                as a prediction metric and using a score distribution plot (100 iterations were performed),
+                                the following observations are obtained:
+                            </p>
+                            <p>
+                                Linear regression, although simple and easy to interpret, shows limited performance
+                                with an R-squared between 0.44 and 0.51, which is considered unsatisfactory for this
+                                type of model. In contrast, the Random Forest model presents a considerably superior 
+                                performance, with an R-squared between 0.87 and 0.90, indicating an effective capture
+                                of the relationship between the input features and the target variable. In contrast,
+                                the neural network, with an approximate R-squared range of 0.70 to 0.77, exhibits
+                                competitive performance with respect to linear regression, although it does not reach
+                                the accuracy of the Random Forest model. Despite this, it remains a viable option,
+                                especially for modeling nonlinear relationships in the data.
+                            </p>
+                            <p>
+                                In conclusion, although Random Forest stands out as the most accurate option for
+                                prediction, the neural network offers flexibility to capture more complex relationships,
+                                albeit at the cost of possibly more hyperparameter tuning and training time. Linear
+                                regression, for its simplicity, may not be suitable for this data set due to its limited
+                                ability to model its complexity.
                             </p>
                         </div>
                     </section>
