@@ -1,17 +1,13 @@
-// añadir logo de la universidad del norte centrado en formato markdown
-<p align="center">
-  <img src="https://www.uninorte.edu.co/documents/20182/0/Logo+Universidad+del+Norte.png/1e4f4b7b-1b7b-4b7b-8b7b-4b7b8b7b4b7b" alt="Universidad del Norte" width="400" height="200">
-</p>
-
-
+![Universidad del Norte](mi-imagen-genial.png)
+<img src="image.png" alt="Universidad del Norte" />
 
 # Optimization Project 2024-10
 
 ## Team members
-- [Almor21]
-- [DiegoLuis62]
-- [lunajulio]
-- [JuandiGo1]
+- [Almor21] (https://github.com/Almor21)
+- [DiegoLuis62] (https://github.com/DiegoLuis62)
+- [lunajulio] (https://github.com/lunajulio)
+- [JuandiGo1] (https://github.com/JuandiGo1)
   
 ## Project description
 The project aims to analyze the "Colombia Housing Properties Price" dataset to understand the factors influencing property prices in Colombia. The dataset contains over 1,000,000 property listings with features such as price, location, and property size. By analyzing this data, we aim to identify key factors that drive property prices in Colombia, providing valuable insights for real estate investors, policymakers, and other stakeholders. Our analysis will involve exploratory data analysis, feature engineering, and model building to predict property prices based on the dataset's features.
@@ -23,7 +19,7 @@ The project aims to analyze the "Colombia Housing Properties Price" dataset to u
 4. Evaluate the performance of the predictive models and identify areas for improvement.
    
 ## Link of dataset
-- [Colombia Housing Properties Price](https://www.kaggle.com/)
+- [Colombia Housing Properties Price](https://www.kaggle.com/datasets/julianusugaortiz/colombia-housing-properties-price)
   
 ## Project structure
 The project will be structured as follows:
