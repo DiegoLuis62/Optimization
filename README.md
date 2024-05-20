@@ -1,13 +1,10 @@
-![Universidad del Norte](mi-imagen-genial.png)
-<img src="image.png" alt="Universidad del Norte" />
-
 # Optimization Project 2024-10
 
 ## Team members
-- [Almor21] (https://github.com/Almor21)
-- [DiegoLuis62] (https://github.com/DiegoLuis62)
-- [lunajulio] (https://github.com/lunajulio)
-- [JuandiGo1] (https://github.com/JuandiGo1)
+- [Almor21](https://github.com/Almor21)
+- [DiegoLuis62](https://github.com/DiegoLuis62)
+- [lunajulio](https://github.com/lunajulio)
+- [JuandiGo1](https://github.com/JuandiGo1)
   
 ## Project description
 The project aims to analyze the "Colombia Housing Properties Price" dataset to understand the factors influencing property prices in Colombia. The dataset contains over 1,000,000 property listings with features such as price, location, and property size. By analyzing this data, we aim to identify key factors that drive property prices in Colombia, providing valuable insights for real estate investors, policymakers, and other stakeholders. Our analysis will involve exploratory data analysis, feature engineering, and model building to predict property prices based on the dataset's features.
