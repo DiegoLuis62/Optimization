@@ -62,7 +62,7 @@
             <section class="buttons">
                 <div id="btn_model1" class="btn select" onclick="setSelect('0')">
                     <h3>Model 1</h3>
-                    <p>Lineal Regression</p>
+                    <p>Random Forest Regression</p>
                 </div>
                 <div id="btn_model2" class="btn" onclick="setSelect('1')">
                     <h3>Model 2</h3>
@@ -131,6 +131,10 @@
                                 of the target variable that is explained by the model. In other words,
                                 it indicates how well the model predictions fit the actual data.
                             </p>
+                            <div class="graph-distribution">
+                                <img src="Images/distribRandom.png">
+                                <span>Distribution of the score in 100 iterations</span>
+                            </div>
                         </div>
                     </section>
         
@@ -153,9 +157,9 @@
                                 After evaluating three different regression models to predict housing
                                 prices in Colombia, we have determined that the Random Forest model has
                                 proven to be the most promising according to our evaluation metric. The
-                                selection of this model is based on its superior performance, with a score
-                                of 0.7996, compared to the other models tested, namely Linear Regression and
-                                Gradient Boosting Regressor, which scored 0.3752 and 0.7767 respectively.<br>
+                                selection of this model is based on its superior performance, with a score distribution
+                                between 0.60 and 0.80 compared to the other models tested, namely Linear Regression and
+                                Gradient Boosting Regressor.<br>
                                 <br>
                                 By looking at the spread of predicted data versus actual data, several
                                 important patterns were identified. First, we note that the dispersion of the
@@ -274,7 +278,7 @@
                 <div id="containerComparison" class="model">
                     <section class="square_white">
                         <div class="section">
-                            <h3>Comparison in terms of metrics Linear Regression vs Neural Network</h3>
+                            <h3>Comparison in terms of metrics Random Forest Regression vs Neural Network</h3>
                             <p>
                                 When comparing the different models applied to the data set after a cleaning and
                                 analysis process, evaluating them using the coefficient of determination (R-squared)
