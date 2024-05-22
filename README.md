@@ -20,7 +20,7 @@ The project aims to analyze the "Colombia Housing Properties Price" dataset to u
 - [Colombia Housing Properties Price](https://www.kaggle.com/datasets/julianusugaortiz/colombia-housing-properties-price)
 
 ## Link of Google Colaboratory 
--[ProjectML-Optimization-G4.ipynb](https://colab.research.google.com/drive/1-b0mbIYO_TIRO5QeBL3egsXhrnqRf_Vp?usp=sharing)
+- [ProjectML-Optimization-G4.ipynb](https://colab.research.google.com/drive/1-b0mbIYO_TIRO5QeBL3egsXhrnqRf_Vp?usp=sharing)
 
 ## Project structure
 The project will be structured as follows:
